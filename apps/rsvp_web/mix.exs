@@ -24,7 +24,7 @@ defmodule RsvpWeb.Mixfile do
   def application do
     [
       mod: {RsvpWeb.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :rsvp]
     ]
   end
 
@@ -45,6 +45,7 @@ defmodule RsvpWeb.Mixfile do
       {:rsvp, in_umbrella: true},
       {:cowboy, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
+      {:rsvp, in_umbrella: true}
     ]
   end
 
