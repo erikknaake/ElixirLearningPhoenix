@@ -45,6 +45,8 @@ defmodule Rsvp.Mixfile do
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
-    []
+    [
+    init: ["ecto.create", "ecto.migrate", "run priv/repo/seed.exs"]
+    ]
   end
 end
