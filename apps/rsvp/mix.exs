@@ -23,19 +23,22 @@ defmodule Rsvp.Mixfile do
   def application do
     [
       mod: {Rsvp.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :postgrex, :ecto]
     ]
   end
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_),     do: ["lib"]
+  defp elixirc_paths(_), do: ["lib"]
 
   # Specifies your project dependencies.
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    []
+    [
+      {:ecto_sql, "~> 3.0"},
+      {:postgrex, ">= 0.0.0"}
+    ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

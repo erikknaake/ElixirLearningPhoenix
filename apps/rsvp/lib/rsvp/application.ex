@@ -13,7 +13,7 @@ defmodule Rsvp.Application do
     import Supervisor.Spec, warn: false
 
     Supervisor.start_link([
-      
+      worker(Rsvp.Repo, [])
     ], strategy: :one_for_one, name: Rsvp.Supervisor)
   end
 end

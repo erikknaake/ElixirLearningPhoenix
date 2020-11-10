@@ -1,0 +1,1 @@
+rm -rf _build/ deps/ && mix do deps.get, compile
